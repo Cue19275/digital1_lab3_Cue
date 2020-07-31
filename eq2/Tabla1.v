@@ -1,5 +1,5 @@
 //Carlos Cuellar Klingenberger #19275 UVG
-//Archivo correspondiente a la SOP de la tabla 1
+//Archivo correspondiente a la POS de la tabla 1
 
 //Creo el módulo
 module Tabla1();
@@ -15,21 +15,17 @@ wire out2;
 wire out3;
 wire out4;
 wire out5;
-wire out6;
-wire out7;
 wire Y;
 
 not op0(out0, A);
 not op1(out1, B);
 not op2(out2, C);
 
-and op3(out3, out0, out1, out2);
-and op4(out4, out0, B, out2);
-and op5(out5, A, out1, out2);
-and op6(out6, A, out1, C);
-and op7(out7, A, B, C);
+or op3(out3, A, B, out2);
+or op4(out4, A, out1, out2);
+or op5(out5, out0, out1, C);
 
-or op8(Y, out3, out4, out5, out6, out7);
+and op6(Y, out3, out4, out5);
 
 //Inicio de las operaciones
 initial begin
@@ -59,5 +55,3 @@ end
 			$dumpvars(0, Tabla1);
 		end
 endmodule
-
-
