@@ -12,14 +12,14 @@ reg C;
 wire out0;
 wire out1;
 wire out2;
-wire out3;
+wire out3; 
 wire out4;
 wire out5;
 wire out6;
 wire out7;
 wire Y;
 
-not op0(out0, A);
+not op0(out0, A); 
 not op1(out1, B);
 not op2(out2, C);
 
